@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f4f1e8;
+  color: #263c32;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+#root > div {
+  width: 100%;
+  max-width: 680px;
+  background: #fffdf7;
+  padding: 44px;
+  border-radius: 8px;
+  border: 1px solid #e3e5d8;
+  box-shadow: 12px 12px 0 #dce3d3;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.7rem;
+  text-align: center;
+  color: #355746;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 22px 0;
+}
+
+p {
+  color: #78877a;
+  font-size: 0.9rem;
+  margin: 12px 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-weight: 600;
+  margin: 28px 0;
+  color: #263c32;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  padding: 15px 18px;
+  border: 1px solid #d9e0d2;
+  border-radius: 30px;
+  background: #f0f3e9;
+  color: #355746;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.options button:hover {
+  background: #dce7d7;
+  border-color: #9fb69f;
+  transform: translateY(-2px);
+}
+
+.options button[style*="lightblue"] {
+  background: #355746 !important;
+  border-color: #355746 !important;
+  color: #fffdf7 !important;
+}
+
+#root > div > div:last-child {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+#root > div > div:last-child button {
+  flex: 1;
+}
+
+#root > div > div:last-child button:last-child {
+  background: #355746;
+  border-color: #355746;
+  color: white;
+}
+
+#root > div > div:last-child button:last-child:hover {
+  background: #243f31;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 520px) {
+  #root {
+    padding: 16px;
+  }
+
+  #root > div {
+    padding: 28px 20px;
+    box-shadow: 6px 6px 0 #dce3d3;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+}
